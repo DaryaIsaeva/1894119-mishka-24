@@ -1,0 +1,57 @@
+.featured {
+  padding-top: 31px;
+  padding-bottom: 42px;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  color: #444444;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/zigzag-line.svg");
+    bottom: 0;
+    left: 0;
+    height: 6px;
+    width: 320px;
+  }
+}
+
+.featured__subtitle {
+  font-family: "Open Sans bold", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: #63d1bb;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.featured__table {
+  border-collapse: collapse;
+  margin: 28px 0;
+
+  td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+.featured__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.featured__price {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Open Sans bold", sans-serif;
+  padding-top: 25px;
+  padding-bottom: 24px;
+}
