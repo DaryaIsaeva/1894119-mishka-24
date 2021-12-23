@@ -1,8 +1,50 @@
-.slider__list {
-  padding: 0;
-  margin: 0;
+@media (min-width: @mobile-width) {
+  .slider__list {
+    padding: 0;
+    margin: 0;
+  }
+
+  .slider__item {
+    list-style-type: none;
+  }
+
+  .slider__buttons {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ececec;
+    margin-bottom: 38px;
+  }
+
+  .slider__button {
+    width: 130px;
+    padding: 13px 0;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .slider__prev {
+    border-right: 1px solid #ececec;
+  }
 }
 
-.slider__item {
-  list-style-type: none;
+@media (min-width: @tablet-width) {
+  .slider {
+    background-image: url(../img/review.png);
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+
+  .slider__buttons {
+    border: none;
+  }
+
+  .slider__button {
+    width: 50px;
+  }
+
+  .slider__prev {
+    border: none;
+    margin-right: 37px;
+  }
 }

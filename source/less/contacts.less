@@ -1,40 +1,162 @@
-.contacts {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 30px;
-  color: #444444;
+@media (min-width: @mobile-width) {
+  .contacts {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    color: #444444;
+  }
 
-  a {
-    margin-bottom: 39px;
+  .contacts__title {
+    svg {
+      display: none;
+    }
+  }
+
+  .contacts__wrapper {
+    padding-top: 38px;
+    padding-bottom: 39px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contacts__list {
+    margin-top: 38px;
+    margin-bottom: 62px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts__image {
+    display: grid;
+    grid-template-rows: minmax(145px, auto) minmax(100px, auto) minmax(209px, auto);
+    background-image: url("../img/map-mobile.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 42px;
+    width: 100vw;
+
+    .contacts__pin {
+      background-image: url("../img/map-pin.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      grid-row: 2/3;
+      min-width: 67px;
+      min-height: 100px;
+    }
+  }
+
+  .contacts__item {
+    display: grid;
+    grid-template-columns: max-content auto;
+    column-gap: 37px;
+
+    &:first-of-type {
+      margin-bottom: 35px;
+    }
+  }
+
+  .contacts__description {
+    margin: 0;
+
+    a {
+      text-decoration: none;
+      color: #444444;
+      border-bottom: 1px solid #62d1ba;
+      width: 230px;
+    }
   }
 }
 
-.contacts__wrapper {
-  padding-left: 29px;
-  padding-right: 30px;
+@media (min-width: @tablet-width) {
+  .contacts {
+    font-size: 17px;
+    line-height: 30px;
+
+    .title {
+      align-self: flex-start;
+    }
+  }
+
+  .contacts__wrapper {
+    padding-top: 68px;
+    padding-bottom: 57px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .contacts__title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    svg {
+      display: block;
+    }
+  }
+
+  .contacts__list {
+    display: grid;
+    grid-template-columns: 334px 334px;
+    column-gap: 25px;
+    margin: 49px 0;
+  }
+
+  .contacts__image {
+    display: grid;
+    grid-template-rows: minmax(139px, auto) minmax(100px, auto) minmax(218px, auto);
+    background-image: url("../img/map-tablet.jpg");
+    width: 100%;
+  }
 }
 
-.contacts__list {
-  margin-bottom: 62px;
-}
+@media (min-width: @desktop-width) {
+  .contacts__wrapper {
+    display: grid;
+    grid-template-columns: 47px auto 527px;
+    column-gap: 59px;
+    grid-template-rows: auto auto auto;
+  }
 
-.contacts__image {
-  position: relative;
-  margin-bottom: 42px;
-}
+  .contacts__container {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
 
-.contacts__pin {
-  position: absolute;
-  top: 145px;
-  left: 138px;
-}
+  .contacts__title {
+    flex-direction: row-reverse;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    margin-top: 60px;
+    margin-bottom: 28px;
+  }
 
-.contacts__description {
-  a {
-    text-decoration: none;
-    color: #444444;
-    border-bottom: 1px solid #62d1ba;
+  .contacts__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: 0;
+    margin-bottom: 84px;
+  }
+
+  .contacts__image {
+    grid-column: 3/4;
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-rows: minmax(146px, auto) minmax(100px, auto) minmax(211px, auto);
+    background-image: url("../img/map-desktop.jpg");
+    margin: 0;
+  }
+
+  .contacts__button {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-left: auto;
   }
 }

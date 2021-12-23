@@ -1,33 +1,74 @@
-.inner-nav__list {
-  padding: 0;
-  margin: 0;
+@media (min-width: @mobile-width) {
+  .inner-nav__list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inner-nav__item {
+    list-style-type: none;
+  }
+
+  .inner-nav__item:first-child {
+    background-color: #63d1bb;
+    background-image: url("../img/interior.svg");
+    background-repeat: no-repeat;
+    background-position: right 36px top 23px;
+  }
+
+  .inner-nav__item:last-child {
+    background-color: #56c3b2;
+    background-image: url("../img/toy.svg");
+    background-repeat: no-repeat;
+    background-position: right 27px top 21px;
+  }
+
+  .inner-nav__link {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 19px;
+    line-height: 24px;
+    padding-top: 24px;
+    padding-bottom: 31px;
+    padding-left: 30px;
+  }
 }
 
-.inner-nav__item {
-  list-style-type: none;
-  padding-top: 24px;
-  padding-bottom: 31px;
-  padding-left: 30px;
+@media (min-width: @tablet-width) {
+  .inner-nav__list {
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/zigzag-fill-desktop.svg");
+      height: 24px;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .inner-nav__link {
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 25px;
+    padding-bottom: 34px;
+    padding-left: 36px;
+    width: 334px - 36px;
+  }
 }
 
-.inner-nav__item:first-child {
-  background-color: #63d1bb;
-  background-image: url("../img/interior.svg");
-  background-repeat: no-repeat;
-  background-position: right 36px top 23px;
-}
-
-.inner-nav__item:last-child {
-  background-color: #56c3b2;
-  background-image: url("../img/toy.svg");
-  background-repeat: no-repeat;
-  background-position: right 27px top 21px;
-}
-
-.inner-nav__link {
-  text-decoration: none;
-  color: #ffffff;
-  font-family: "Open Sans", sans-serif;
-  font-size: 19px;
-  line-height: 24px;
+@media (min-width: @desktop-width) {
+  .inner-nav__link {
+    padding-top: 25px;
+    padding-bottom: 34px;
+    padding-left: 37px;
+    width: 525px - 37px;
+  }
 }
