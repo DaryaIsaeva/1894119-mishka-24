@@ -7,17 +7,10 @@
     background-color: rgba(241, 241, 241, 0.4);
   }
 
-  .inner-header--catalog {
-    padding: 73px 42px;
+  .inner-header--size {
     background-color: #f1f1f1;
     text-align: center;
-  }
-
-  .inner-header--form {
-    background-color: #f1f1f1;
-    padding: 73px 22px;
-    text-align: center;
-    display: block;
+    padding: 74px 0;
   }
 
   .inner-header__title {
@@ -33,6 +26,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .inner-header--size {
+    padding-top: 101px;
+    padding-bottom: 75px;
+  }
+
   .inner-header__title {
     font-size: 43px;
     line-height: 50px;
@@ -40,6 +38,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .inner-header--size {
+    padding-top: 102px;
+    padding-bottom: 96px;
+  }
+
   .inner-header__title {
     font-size: 53px;
     line-height: 57px;

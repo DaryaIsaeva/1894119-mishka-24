@@ -1,56 +1,113 @@
-.product__description {
-  border: 1px solid #ececec;
-  padding: 27px 28px;
-}
+@media (min-width: @mobile-width) {
+  .product {
+    border: 1px solid #ececec;
+    margin-bottom: 30px;
+    &:first-child {
+      margin-top: 30px;
+    }
+  }
 
-.product__text {
-  position: relative;
-  margin-bottom: 22px;
+  .product__text {
+    position: relative;
+    padding-left: 28px;
+    padding-top: 28px;
+    padding-bottom: 18px;
+    padding-right: 32px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -17px;
-    height: 1px;
-    background-color: #ececec;
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: -17px;
+    //   height: 1px;
+    //   background-color: #ececec;
+    // }
+  }
+
+  .product__title {
+    font-family: "Open Sans bold", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 24px;
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .product-parameters {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 30px;
+    margin: 0;
+  }
+
+  .product__buy {
+    padding-left: 28px;
+    padding-top: 23px;
+    padding-bottom: 27px;
+    padding-right: 32px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .product__price {
+    font-family: "Open Sans bold", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .product__button {
+    border: 0;
+    background-color: #ffffff;
+  }
+
+  .product__image--tablet {
+    display: none;
+  }
+
+  .product__image--desktop {
+    display: none;
   }
 }
 
-.product__title {
-  font-family: "Open Sans bold", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 24px;
-  color: #000000;
-  text-decoration: none;
-}
+@media (min-width: @tablet-width) {
+  .product {
+    display: grid;
+    grid-template-columns: 334px 334px;
+    grid-template-rows: 260px 74px;
+  }
 
-.product-parameters {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 30px;
-  margin: 0;
-}
+  .product__image {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+  }
 
-.product__buy {
-  display: flex;
-  justify-content: space-between;
-}
+  .product__image--mobile {
+    display: none;
+  }
 
-.product__price {
-  font-family: "Open Sans bold", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 24px;
-}
+  .product__image--tablet {
+    display: block;
+  }
 
-.product__button {
-  border: 0;
-  background-color: #ffffff;
+  .product__text {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding-left: 34px;
+    padding-top: 27px;
+    padding-right: 32px;
+  }
+
+  .product__buy {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding-left: 34px;
+    padding-top: 24px;
+    padding-right: 32px;
+  }
 }

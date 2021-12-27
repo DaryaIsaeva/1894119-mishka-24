@@ -47,8 +47,7 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    width: auto;
-    display: flex;
+    width: @tablet-width;
     padding: 0;
   }
 
@@ -70,6 +69,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .page-header {
+    width: @desktop-width;
+  }
+
   .page-header__logo--tablet {
     display: none;
   }
