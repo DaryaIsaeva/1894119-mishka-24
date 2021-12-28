@@ -9,6 +9,7 @@
   }
 
   .contacts__title {
+    padding: 0 29px;
     svg {
       display: none;
     }
@@ -21,7 +22,6 @@
     padding-right: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   .contacts__list {
@@ -29,6 +29,7 @@
     margin-bottom: 62px;
     display: flex;
     flex-direction: column;
+    padding: 0 29px;
   }
 
   .contacts__image {
@@ -38,7 +39,7 @@
     background-position: center;
     background-repeat: no-repeat;
     margin-bottom: 42px;
-    width: 100vw;
+    width: 320px;
 
     .contacts__pin {
       background-image: url("../img/map-pin.svg");
@@ -90,9 +91,9 @@
   }
 
   .contacts__title {
-    width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 0 50px;
     svg {
       display: block;
     }
@@ -100,16 +101,17 @@
 
   .contacts__list {
     display: grid;
-    grid-template-columns: 334px 334px;
+    grid-template-columns: 1fr 1fr;
     column-gap: 25px;
     margin: 49px 0;
+    padding: 0 50px;
   }
 
   .contacts__image {
     display: grid;
     grid-template-rows: minmax(139px, auto) minmax(100px, auto) minmax(218px, auto);
     background-image: url("../img/map-tablet.jpg");
-    width: 100%;
+    width: 768px;
   }
 }
 

@@ -1,43 +1,87 @@
-.form {
-  width: 260px;
-  margin: 0 auto;
-  margin-bottom: 55px;
-}
+@media (min-width: @mobile-width) {
+  .form {
+    // margin: 0 auto;
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: column;
+  }
 
-.form__text {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 24px;
-  padding-top: 17px;
-  padding-bottom: 17px;
-  margin: 0;
-  margin-bottom: 29px - 17px;
-  color: #444444;
-}
-
-.form__group {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 33px;
-  legend {
+  .form__text {
     font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: #63d1bb;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    margin: 0;
+    margin-bottom: 29px - 17px;
+    color: #444444;
+    width: 260px;
+  }
+
+  .form__group {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 33px;
+
+    legend {
+      font-family: "Open Sans", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #63d1bb;
+    }
+  }
+
+  .form__note {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #444444;
   }
 }
 
-.form__note {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  color: #444444;
+@media (min-width: @tablet-width) {
+  .form {
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .form__text {
+    font-size: 17px;
+    line-height: 30px;
+    width: 668px;
+    align-self: center;
+    padding-top: 63px;
+    padding-bottom: 13px;
+    margin: 0;
+  }
+
+  .form__container {
+    background-color: #f1f1f1;
+    width: 100vw;
+  }
+
+  .form__group {
+    width: 668px;
+    margin: 50px auto;
+  }
+
+  .form__note {
+    width: 668px;
+    align-self: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    .button {
+      margin: 0;
+    }
+  }
 }
