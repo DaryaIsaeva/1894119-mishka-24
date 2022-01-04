@@ -7,6 +7,10 @@
   }
 
   .form__text {
+    align-self: center;
+  }
+
+  .form__text p {
     font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -49,11 +53,11 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    margin: 0 auto;
     margin-bottom: 50px;
+    width: 100%;
   }
 
-  .form__text {
+  .form__text p {
     font-size: 17px;
     line-height: 30px;
     width: 668px;
@@ -65,12 +69,11 @@
 
   .form__container {
     background-color: #f1f1f1;
-    width: 100vw;
   }
 
   .form__group {
     width: 668px;
-    margin: 50px auto;
+    margin: 66px auto;
   }
 
   .form__note {
@@ -83,5 +86,22 @@
     .button {
       margin: 0;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__text {
+    width: 1050px;
+    display: grid;
+    grid-template-columns: 112px auto;
+  }
+
+  .form__text p {
+    width: 702px;
+    grid-column: 2/-1;
+  }
+
+  .form__group {
+    width: 1050px;
   }
 }

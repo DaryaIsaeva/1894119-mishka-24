@@ -30,12 +30,24 @@
   .filter__item {
     list-style-type: none;
   }
+
+  .filter__item--radio:not(:last-child) {
+    margin-bottom: 11px;
+  }
+
+  .filter__item--checkbox:not(:last-child) {
+    margin-bottom: 23px;
+  }
+
+  .filter__item--checkbox:not(:nth-last-child(2)) {
+    margin-bottom: 23px;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .filter {
     display: grid;
-    grid-template-columns: 167px 1fr;
+    grid-template-columns: 167px auto;
   }
 
   .filter__title {
@@ -48,6 +60,18 @@
   }
 
   .filter__list {
+    margin-top: -26px;
     grid-column: 2/3;
+  }
+
+  .filter__list--columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter {
+    grid-template-columns: 112px auto;
   }
 }

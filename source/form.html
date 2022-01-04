@@ -83,21 +83,23 @@
       </header>
 
       <form class="form" method="post" action="https://echo.htmlacademy.ru/">
-        <p class="form__text">
-          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
-        </p>
+        <div class="form__text">
+          <p>
+            Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+          </p>
+        </div>
 
         <fieldset class="form__group filter">
           <legend class="filter__title filter__title--type">Тип</legend>
           <ul class="filter__list">
-            <li class="filter__item">
+            <li class="filter__item filter__item--radio">
               <label class="filter__label control">
                 <input class="control__input" type="radio" name="accessory" checked>
                 <span class="control__mark"></span>
                 <span class="control__label">Аксессуар для интерьера</span>
               </label>
             </li>
-            <li class="filter__item">
+            <li class="filter__item filter__item--radio">
               <label class="filter__label control">
                 <input class="control__input" type="radio" name="toy">
                 <span class="control__mark"></span>
@@ -110,43 +112,43 @@
         <div class="form__container">
           <fieldset class="form__group filter">
             <legend class="filter__title filter__title--legend">Цвет</legend>
-            <ul class="filter__list">
-              <li class="filter__item">
+            <ul class="filter__list filter__list--columns">
+              <li class="filter__item filter__item--checkbox">
                 <label class="filter__label control">
                   <input class="control__input" type="checkbox" name="white" checked>
                   <span class="control__mark"></span>
                   <span class="control__label">Белый</span>
                 </label>
               </li>
-              <li class="filter__item">
+              <li class="filter__item filter__item--checkbox">
                 <label class="filter__label control">
                   <input class="control__input" type="checkbox" name="gray" checked>
                   <span class="control__mark"></span>
                   <span class="control__label">Серый</span>
                 </label>
               </li>
-              <li class="filter__item">
+              <li class="filter__item filter__item--checkbox">
                 <label class="filter__label control">
                   <input class="control__input" type="checkbox" name="tiffany">
                   <span class="control__mark"></span>
                   <span class="control__label">Тиффани</span>
                 </label>
               </li>
-              <li class="filter__item">
+              <li class="filter__item filter__item--checkbox">
                 <label class="filter__label control">
                   <input class="control__input" type="checkbox" name="black">
                   <span class="control__mark"></span>
                   <span class="control__label">Черный</span>
                 </label>
               </li>
-              <li class="filter__item">
+              <li class="filter__item filter__item--checkbox">
                 <label class="filter__label control">
                   <input class="control__input" type="checkbox" name="pink">
                   <span class="control__mark"></span>
                   <span class="control__label">Розовый</span>
                 </label>
               </li>
-              <li class="filter__item">
+              <li class="filter__item filter__item--checkbox">
                 <label class="filter__label control">
                   <input class="control__input" type="checkbox" name="orange">
                   <span class="control__mark"></span>
@@ -189,7 +191,9 @@
               </g>
               </svg>
             </label>
+          </fieldset>
 
+          <fieldset class="form__group form-contacts">
             <legend class="form-contacts__title">E-MAIL</legend>
             <input class="form-contacts__input" type="email" id="email" name="email" placeholder="Ваш Email*">
             <label class="form-contacts__label" for="email">
