@@ -1,43 +1,107 @@
-.form {
-  width: 260px;
-  margin: 0 auto;
-  margin-bottom: 55px;
-}
+@media (min-width: @mobile-width) {
+  .form {
+    // margin: 0 auto;
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: column;
+  }
 
-.form__text {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 24px;
-  padding-top: 17px;
-  padding-bottom: 17px;
-  margin: 0;
-  margin-bottom: 29px - 17px;
-  color: #444444;
-}
+  .form__text {
+    align-self: center;
+  }
 
-.form__group {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 33px;
-  legend {
+  .form__text p {
     font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: #63d1bb;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    margin: 0;
+    margin-bottom: 29px - 17px;
+    color: #444444;
+    width: 260px;
+  }
+
+  .form__group {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 33px;
+
+    legend {
+      font-family: "Open Sans", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #63d1bb;
+    }
+  }
+
+  .form__note {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #444444;
   }
 }
 
-.form__note {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  color: #444444;
+@media (min-width: @tablet-width) {
+  .form {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
+  .form__text p {
+    font-size: 17px;
+    line-height: 30px;
+    width: 668px;
+    align-self: center;
+    padding-top: 63px;
+    padding-bottom: 13px;
+    margin: 0;
+  }
+
+  .form__container {
+    background-color: #f1f1f1;
+  }
+
+  .form__group {
+    width: 668px;
+    margin: 66px auto;
+  }
+
+  .form__note {
+    width: 668px;
+    align-self: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    .button {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__text {
+    width: 1050px;
+    display: grid;
+    grid-template-columns: 112px auto;
+  }
+
+  .form__text p {
+    width: 702px;
+    grid-column: 2/-1;
+  }
+
+  .form__group {
+    width: 1050px;
+  }
 }

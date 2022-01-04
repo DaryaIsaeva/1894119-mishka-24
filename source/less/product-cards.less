@@ -1,11 +1,23 @@
-.product-cards__list {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@media (min-width: @mobile-width) {
+  .product-cards__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-cards__item {
+    list-style-type: none;
+  }
 }
 
-.product-cards__item {
-  list-style-type: none;
+@media (min-width: @desktop-width) {
+  .product-cards__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 52px;
+    margin-top: 111px;
+    margin-bottom: 57px;
+  }
 }

@@ -2,6 +2,7 @@
   .product {
     border: 1px solid #ececec;
     margin-bottom: 30px;
+
     &:first-child {
       margin-top: 30px;
     }
@@ -109,5 +110,42 @@
     padding-left: 34px;
     padding-top: 24px;
     padding-right: 32px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product {
+    margin: 0;
+    // display: flex;
+    // flex-direction: column;
+    grid-template-columns: auto;
+    grid-template-rows: 462px 124px auto;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .product__image {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .product__image--tablet {
+    display: none;
+  }
+
+  .product__image--desktop {
+    display: block;
+  }
+
+  .product__text {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .product__buy {
+    grid-column: 1/2;
+    grid-row: 3/4;
   }
 }
