@@ -1,5 +1,14 @@
 @media (min-width: @mobile-width) {
-  .main-nav {
+  .main-nav--opened {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1;
+  }
+
+  .main-nav--closed {
     display: none;
   }
 
@@ -42,7 +51,11 @@
     font-style: normal;
     font-weight: bold;
     font-size: 17px;
-    line-height: 24px;
+    line-height: 28px;
+
+    svg {
+      margin-right: 25px;
+    }
 
     p {
       margin: 0;
@@ -54,6 +67,9 @@
 @media (min-width: @tablet-width) {
   .main-nav {
     display: block;
+    position: relative;
+    top: 0;
+    background-color: initial;
   }
 
   .main-nav__list {

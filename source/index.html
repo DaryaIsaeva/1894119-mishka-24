@@ -13,16 +13,11 @@
         <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина «Мишка»">
       </a>
 
-      <button class="page-header__toggle" type="button">
-        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 0H0V2H20V0Z" fill="#231F20"/>
-          <path d="M20 6H0V8H20V6Z" fill="#231F20"/>
-          <path d="M20 12H0V14H20V12Z" fill="#231F20"/>
-        </svg>
+      <button class="page-header__toggle page-header__toggle--open" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
 
-      <nav class="page-header__nav main-nav">
+      <nav class="main-nav main-nav--closed">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--logo">
             <a class="page-header__logo page-header__logo--tablet" href="index.html">
@@ -58,7 +53,7 @@
 
           <li class="main-nav__item main-nav__item--cart">
             <a class="main-nav__link" href="#">
-              <svg width="21" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity=".2" d="M20.19 6.86h-3.55L13.19.38c-.2-.38-.61-.48-1.02-.28-.4.19-.5.57-.3.95l3.14 5.8H5.78l3.15-5.8c.2-.38 0-.76-.3-.95A.82.82 0 0 0 7.6.38L4.16 6.86H.8c-.4 0-.81.28-.81.76 0 .38.3.76.81.76h.2l.92 2.86c-.2.1-.3.28-.3.57 0 .38.3.67.7.67L4.06 18h12.88l1.73-5.52c.4 0 .7-.29.7-.67 0-.2-.1-.48-.3-.57L20 8.38h.2c.4 0 .81-.28.81-.76s-.4-.76-.81-.76Zm-4.57 9.62H5.07l-1.21-4.1h13.08l-1.32 4.1Zm1.63-5.53H3.35L2.54 8.3h15.52l-.81 2.66Z" fill="#000"/></svg>
+              <svg class="svg-cart" width="21" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity=".2" d="M20.19 6.86h-3.55L13.19.38c-.2-.38-.61-.48-1.02-.28-.4.19-.5.57-.3.95l3.14 5.8H5.78l3.15-5.8c.2-.38 0-.76-.3-.95A.82.82 0 0 0 7.6.38L4.16 6.86H.8c-.4 0-.81.28-.81.76 0 .38.3.76.81.76h.2l.92 2.86c-.2.1-.3.28-.3.57 0 .38.3.67.7.67L4.06 18h12.88l1.73-5.52c.4 0 .7-.29.7-.67 0-.2-.1-.48-.3-.57L20 8.38h.2c.4 0 .81-.28.81-.76s-.4-.76-.81-.76Zm-4.57 9.62H5.07l-1.21-4.1h13.08l-1.32 4.1Zm1.63-5.53H3.35L2.54 8.3h15.52l-.81 2.66Z" fill="#000"/></svg>
               <p>Корзина: пока пуста</p>
             </a>
           </li>
@@ -79,7 +74,7 @@
     </header>
 
     <main class="page-main">
-      <header class="inner-header">
+      <section class="inner-header">
         <div class="page-main__title">
           <h1 class="inner-header__title">Милые штуки ручной работы для дома</h1>
         </div>
@@ -94,7 +89,7 @@
             </li>
           </ul>
         </nav>
-      </header>
+      </section>
 
       <section class="featured featured__wrapper">
           <h2 class="title featured__title">Вязаные корзинки</h2>
@@ -239,7 +234,7 @@
             </div>
           </dl>
         <div class="contacts__image">
-          <div class="contacts__pin"></div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533216!2d30.320858716006118!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1641659902702!5m2!1sru!2sru" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, г. Санкт-Петербург"></iframe>
         </div>
         <div class="contacts__button">
           <a class="button" href="#">Напишите нам</a>
@@ -286,5 +281,36 @@
       </div>
     </footer>
 
+    <div class="modal modal--close">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Добавить <br> в корзину</h2>
+        <p class="modal__text">Выберите размер:</p>
+        <div class="modal__buttons">
+          <button class="modal__choose-size modal__choose-size--current">S</button>
+          <button class="modal__choose-size">M</button>
+          <button class="modal__choose-size">L</button>
+        </div>
+        <button class="modal__add-to-cart">Добавить</button>
+      </div>
+    </div>
+
+    <script>
+      let mainNavigation = document.querySelector('.main-nav');
+      let navToggle = document.querySelector('.page-header__toggle');
+
+      navToggle.onclick = function () {
+        if (mainNavigation.classList.contains('main-nav--closed')) {
+          mainNavigation.classList.remove('main-nav--closed');
+          mainNavigation.classList.add('main-nav--opened');
+          navToggle.classList.remove('page-header__toggle--open');
+          navToggle.classList.add('page-header__toggle--close');
+        } else {
+          mainNavigation.classList.remove('main-nav--opened');
+          mainNavigation.classList.add('main-nav--closed');
+          navToggle.classList.remove('page-header__toggle--close');
+          navToggle.classList.add('page-header__toggle--open');
+        }
+      }
+    </script>
   </body>
 </html>

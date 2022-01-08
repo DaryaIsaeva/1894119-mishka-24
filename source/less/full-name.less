@@ -67,10 +67,23 @@
     grid-column: 2/3;
     margin-top: -18px;
   }
+
+  .full-name__item {
+    flex-direction: row;
+  }
+
+  .full-name__label {
+    margin-right: 25px;
+  }
+
+  .full-name__input {
+    margin-top: -15px;
+    width: 100%;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .full-name {
-    grid-template-columns: 112px auto;
+    grid-template-columns: 112px 700px;
   }
 }
