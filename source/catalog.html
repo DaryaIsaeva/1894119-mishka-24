@@ -12,16 +12,11 @@
       <a class="page-header__logo page-header__logo--mobile" href="index.html">
         <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина «Мишка»">
       </a>
-        <button class="page-header__toggle" type="button">
-          <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 0H0V2H20V0Z" fill="#231F20"/>
-            <path d="M20 6H0V8H20V6Z" fill="#231F20"/>
-            <path d="M20 12H0V14H20V12Z" fill="#231F20"/>
-          </svg>
+        <button class="page-header__toggle page-header__toggle--open" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
-        <nav class="page-header__nav main-nav">
+        <nav class="main-nav main-nav--closed">
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--logo">
               <a class="page-header__logo page-header__logo--tablet" href="index.html">
@@ -78,9 +73,9 @@
     </header>
 
     <main class="page-main">
-      <header class="inner-header inner-header--size">
+      <section class="inner-header inner-header--size">
         <h1 class="inner-header__title">Каталог товаров</h1>
-      </header>
+      </section>
 
       <section class="product-cards">
         <h2 class="visually-hidden">Список товаров</h2>
@@ -192,5 +187,23 @@
       </div>
     </footer>
 
+    <script>
+      let mainNavigation = document.querySelector('.main-nav');
+      let navToggle = document.querySelector('.page-header__toggle');
+
+      navToggle.onclick = function () {
+        if (mainNavigation.classList.contains('main-nav--closed')) {
+          mainNavigation.classList.remove('main-nav--closed');
+          mainNavigation.classList.add('main-nav--opened');
+          navToggle.classList.remove('page-header__toggle--open');
+          navToggle.classList.add('page-header__toggle--close');
+        } else {
+          mainNavigation.classList.remove('main-nav--opened');
+          mainNavigation.classList.add('main-nav--closed');
+          navToggle.classList.remove('page-header__toggle--close');
+          navToggle.classList.add('page-header__toggle--open');
+        }
+      }
+    </script>
   </body>
 </html>
