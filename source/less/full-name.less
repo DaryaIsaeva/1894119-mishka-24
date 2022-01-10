@@ -46,6 +46,16 @@
     box-shadow: inset 0 -2px 0 #000000;
     height: 52px;
   }
+
+  .full-name__input::placeholder {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 18px;
+    color: #000000;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -79,6 +89,11 @@
   .full-name__input {
     margin-top: -15px;
     width: 100%;
+  }
+
+  .full-name__input::placeholder {
+    font-size: 19px;
+    padding-left: 17px;
   }
 }
 
