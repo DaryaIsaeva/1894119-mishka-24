@@ -1,12 +1,13 @@
 @media (min-width: @mobile-width) {
   .featured {
-    padding-top: 31px;
-    padding-bottom: 42px;
     position: relative;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     color: #444444;
+    display: flex;
+    flex-direction: column;
+    padding: 31px 30px 42px 30px;
 
     // &::before {
     //   content: "";
@@ -18,19 +19,13 @@
     // }
   }
 
-  .featured__wrapper {
-    display: flex;
-    flex-direction: column;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
   .featured__title {
+    margin-top: 0;
     margin-bottom: 4px;
   }
 
   .featured__subtitle {
-    font-family: "Open Sans bold", sans-serif;
+    font-family: "Open Sans bold", "Arial", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 17px;
@@ -66,18 +61,10 @@
     width: 163px;
   }
 
-  .featured__image--tablet {
-    display: none;
-  }
-
-  .featured__image--desktop {
-    display: none;
-  }
-
   .featured__price {
     margin: 0 auto;
     text-align: center;
-    font-family: "Open Sans bold", sans-serif;
+    font-family: "Open Sans bold", "Arial", sans-serif;
     padding-top: 25px;
     padding-bottom: 24px;
     font-size: 17px;
@@ -96,16 +83,12 @@
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto auto auto;
     column-gap: 42px;
+    padding: 40px 50px 52px 50px;
   }
 
   // .featured::before {
   //   width: @tablet-width;
   // }
-
-  .featured__wrapper {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
 
   .featured__title {
     align-items: center;
@@ -122,6 +105,7 @@
     text-align: center;
     grid-column: 2/3;
     grid-row: 1/2;
+    margin-bottom: 0;
     margin-left: auto;
     width: 100px;
     align-self: center;
@@ -150,14 +134,6 @@
     grid-row: 2/-1;
   }
 
-  .featured__image--mobile {
-    display: none;
-  }
-
-  .featured__image--tablet {
-    display: block;
-  }
-
   .featured__price {
     grid-column: 1/2;
     grid-row: 4/5;
@@ -181,10 +157,12 @@
   //   width: @desktop-width;
   // }
 
-  .featured__wrapper {
+  .featured {
     grid-template-columns: 100px auto 1fr;
     grid-template-rows: auto auto auto auto;
     column-gap: 58px;
+    padding-top: 54px;
+    padding-bottom: 73px;
   }
 
   .featured__title {
@@ -196,6 +174,7 @@
 
   .featured__subtitle {
     grid-column: 1/2;
+    margin-top: 25px;
   }
 
   .featured__text {
@@ -215,13 +194,5 @@
   .featured__image {
     grid-column: 3/4;
     grid-row: 1/-1;
-  }
-
-  .featured__image--tablet {
-    display: none;
-  }
-
-  .featured__image--desktop {
-    display: block;
   }
 }

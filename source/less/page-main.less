@@ -9,12 +9,17 @@
   .page-main__title {
     display: grid;
     grid-template-rows: minmax(73px, auto) minmax(90px, auto) minmax(120px, auto);
-    background-image: url("../img/inner-header-background-image-mobile.jpg");
+    background-image: url("../img/inner-header-background-mobile.jpg");
     background-position: center;
     background-repeat: no-repeat;
     min-height: 373px;
     width: 260px;
     margin: 0 auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/inner-header-background-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
 
     h1 {
       margin: 0;
@@ -26,20 +31,30 @@
 
 @media (min-width: @tablet-width) {
   .page-main {
-    margin-top: -40px;
+    margin-top: -48px;
   }
 
   .page-main__title {
     grid-template-rows: minmax(155px, auto) minmax(100px, auto) minmax(372px, auto);
-    background-image: url("../img/inner-header-background-image-tablet.jpg");
+    background-image: url("../img/inner-header-background-tablet.jpg");
     width: 668px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/inner-header-background-tablet@2x.jpg");
+      background-size: 668px auto;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-main__title {
     grid-template-rows: minmax(155px, auto) minmax(100px, auto) minmax(355px, auto);
-    background-image: url("../img/inner-header-background-image-desktop.jpg");
+    background-image: url("../img/inner-header-background-desktop.jpg");
     width: 700px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/inner-header-background-desktop@2x.jpg");
+      background-size: 700px auto;
+    }
   }
 }

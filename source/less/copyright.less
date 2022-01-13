@@ -1,21 +1,38 @@
 @media (min-width: @mobile-width) {
   .copyright {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  .copyright__link {
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 22px;
-    padding-bottom: 22px;
+
+    svg {
+      fill: #63d1bb;
+    }
+
+    &:hover svg {
+      fill: #46c1ae;
+    }
+
+    &:active svg {
+      opacity: 0.3;
+    }
   }
 
   .copyright__text {
     display: block;
     margin: 0;
     margin-right: 27px;
-    font-family: "Open Sans bold", sans-serif;
+    font-family: "Open Sans bold", "Arial", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 19px;
     line-height: 18px;
+    color: #000000;
   }
 }
 

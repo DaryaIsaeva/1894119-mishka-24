@@ -1,0 +1,29 @@
+@media (min-width: @mobile-width) {
+  .cart__link {
+    color: #000000;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 28px;
+    text-decoration: none;
+
+    &:hover span {
+      opacity: 0.6;
+    }
+
+    &:hover svg {
+      fill: #63d1bb;
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    svg {
+      opacity: 0.2;
+      margin-right: 25px;
+    }
+  }
+}
