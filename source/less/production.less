@@ -19,6 +19,8 @@
   .production__title {
     padding-top: 21px;
     padding-bottom: 26px;
+    display: flex;
+    align-items: center;
 
     h3 {
       margin: 0;
@@ -31,10 +33,15 @@
     display: grid;
     grid-template-columns: 1fr 101px 1fr;
     grid-template-rows: 1fr 77px 1fr;
+    margin-bottom: 35px;
+  }
 
-    div {
-      grid-column: 1/-1;
-      grid-row: 1/-1;
+  .production__image {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+
+    img {
+      height: 100%;
     }
   }
 
@@ -83,8 +90,13 @@
     padding-top: 39px;
   }
 
+  .production__headline br {
+    display: none;
+  }
+
   .production__video {
     order: -1;
+    margin-bottom: 0;
   }
 
   .production__text {
