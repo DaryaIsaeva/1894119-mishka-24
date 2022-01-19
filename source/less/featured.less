@@ -7,16 +7,18 @@
     color: #444444;
     display: flex;
     flex-direction: column;
-    padding: 31px 30px 42px 30px;
+    padding: 0 30px;
+    margin-bottom: 73px;
 
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   background-image: url("../img/zigzag-line.svg");
-    //   bottom: 0;
-    //   height: 6px;
-    //   width: @mobile-width;
-    // }
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/zigzag-line-mobile.svg");
+      left: 0;
+      right: 0;
+      bottom: -42px;
+      height: 6px;
+    }
   }
 
   .featured__title {
@@ -61,12 +63,15 @@
     width: 163px;
   }
 
+  .featured__image {
+    align-self: center;
+    margin-bottom: 25px;
+  }
+
   .featured__price {
     margin: 0 auto;
     text-align: center;
     font-family: "Open Sans bold", "Arial", sans-serif;
-    padding-top: 25px;
-    padding-bottom: 24px;
     font-size: 17px;
     line-height: 24px;
 
@@ -83,12 +88,16 @@
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto auto auto;
     column-gap: 42px;
-    padding: 40px 50px 52px 50px;
+    padding: 0 50px;
+    margin-bottom: 124px;
   }
 
-  // .featured::before {
-  //   width: @tablet-width;
-  // }
+  .featured::before {
+    background-image: url("../img/zigzag-line-tablet.svg");
+    width: @tablet-width;
+    height: 17px;
+    bottom: -69px;
+  }
 
   .featured__title {
     align-items: center;
@@ -108,7 +117,7 @@
     margin-bottom: 0;
     margin-left: auto;
     width: 100px;
-    align-self: center;
+    margin-top: 11px;
   }
 
   .featured__text {
@@ -132,6 +141,7 @@
   .featured__image {
     grid-column: 2/3;
     grid-row: 2/-1;
+    margin: 0;
   }
 
   .featured__price {
@@ -153,16 +163,18 @@
 }
 
 @media (min-width: @desktop-width) {
-  // .featured::before {
-  //   width: @desktop-width;
-  // }
-
   .featured {
     grid-template-columns: 100px auto 1fr;
     grid-template-rows: auto auto auto auto;
     column-gap: 58px;
-    padding-top: 54px;
-    padding-bottom: 73px;
+    margin-bottom: 164px;
+  }
+
+  .featured::before {
+    background-image: url("../img/zigzag-line-desktop.svg");
+    width: @desktop-width;
+    height: 23px;
+    bottom: -96px;
   }
 
   .featured__title {

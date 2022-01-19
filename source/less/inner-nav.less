@@ -10,14 +10,6 @@
     list-style-type: none;
   }
 
-  // .inner-nav__item:first-child {
-  //   background-color: #63d1bb;
-  // }
-
-  // .inner-nav__item:last-child {
-  //   background-color: #56c3b2;
-  // }
-
   .inner-nav__link {
     display: flex;
     justify-content: space-between;
@@ -77,11 +69,10 @@
     &::after {
       position: absolute;
       content: "";
-      background-image: url("../img/zigzag-fill-desktop.svg");
+      background-image: url("../img/zigzag-fill-tablet.svg");
       height: 24px;
-      bottom: -15px;
-      left: 0;
-      right: 0;
+      width: 100%;
+      bottom: -10px;
     }
   }
 
@@ -104,6 +95,13 @@
 }
 
 @media (min-width: @desktop-width) {
+  .inner-nav__list::after {
+    background-image: url("../img/zigzag-fill-desktop.svg");
+    background-position: 50% 50%;
+    height: 34px;
+    bottom: -17px;
+  }
+
   .inner-nav__link {
     width: 525px - 37px;
   }

@@ -50,10 +50,6 @@
     }
   }
 
-  .form-contacts__input + svg {
-    opacity: 0.2;
-  }
-
   .form-contacts__input::placeholder {
     font-family: "Open Sans", "Arial", sans-serif;
     font-style: normal;
@@ -65,8 +61,15 @@
   }
 
   .form-contacts__label {
+    fill: #000000;
+    opacity: 0.2;
     position: absolute;
     right: 3px;
+
+    path {
+      opacity: inherit;
+      fill: inherit;
+    }
   }
 }
 

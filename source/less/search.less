@@ -12,7 +12,7 @@
       opacity: 0.6;
     }
 
-    &:hover svg {
+    &:hover .search-icon {
       fill: #63d1bb;
       opacity: 1;
     }
@@ -20,10 +20,15 @@
     &:active {
       opacity: 0.3;
     }
+  }
 
-    svg {
-      opacity: 0.2;
-      margin-right: 26px;
+  .search-icon {
+    opacity: 0.2;
+    margin-right: 26px;
+
+    path {
+      fill: inherit;
+      opacity: inherit;
     }
   }
 }
