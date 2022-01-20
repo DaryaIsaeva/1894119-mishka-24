@@ -1,13 +1,21 @@
-.author-list {
-  margin: 0;
-  padding: 0;
+@media (min-width: @mobile-width) {
+  .author-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .author-list__item {
+    list-style-type: none;
+    margin-bottom: 30px;
+
+    div {
+      margin-bottom: 5px;
+    }
+  }
 }
 
-.author-list__item {
-  list-style-type: none;
-  margin-bottom: 30px;
-
-  div {
-    margin-bottom: 5px;
+@media (min-width: @tablet-width) {
+  .author-list__item {
+    margin: 0;
   }
 }

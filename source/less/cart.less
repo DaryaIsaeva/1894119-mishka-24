@@ -12,7 +12,7 @@
       opacity: 0.6;
     }
 
-    &:hover svg {
+    &:hover .cart-icon {
       fill: #63d1bb;
       opacity: 1;
     }
@@ -20,10 +20,15 @@
     &:active {
       opacity: 0.3;
     }
+  }
 
-    svg {
-      opacity: 0.2;
-      margin-right: 25px;
+  .cart-icon {
+    opacity: 0.2;
+    margin-right: 25px;
+
+    path {
+      fill: inherit;
+      opacity: inherit;
     }
   }
 }
