@@ -17,7 +17,8 @@
 
   .slider__button {
     width: 130px;
-    padding: 13px 0;
+    padding-top: 13px;
+    padding-bottom: 10px;
     background-color: #ffffff;
     border: none;
     cursor: pointer;
@@ -51,6 +52,7 @@
   .slider__buttons {
     border: none;
     margin-bottom: 0;
+    margin-right: 25px;
   }
 
   .slider__button {
@@ -63,13 +65,14 @@
   }
 }
 
-// @media (min-width: @desktop-width) {
-//   .slider {
-//     background-image: url("../img/review-desktop.jpg");
+@media (min-width: @desktop-width) {
+  .slider {
+    background-image: url("../img/review-desktop.jpg");
+    background-position: center left 50px;
 
-//     @media (min-resolution: 2dppx) {
-//       background-image: url("../img/review-desktop@2x.jpg");
-//       background-size: 350px auto;
-//     }
-//   }
-// }
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review-desktop@2x.jpg");
+      background-size: 350px auto;
+    }
+  }
+}
