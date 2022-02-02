@@ -2,11 +2,13 @@
   .author-list {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
   .author-list__item {
     list-style-type: none;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
+    margin-left: -21px;
 
     div {
       margin-bottom: 5px;
@@ -17,5 +19,15 @@
 @media (min-width: @tablet-width) {
   .author-list__item {
     margin: 0;
+
+    div {
+      letter-spacing: 0.6px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .author-list__item div {
+    letter-spacing: 0.1px;
   }
 }

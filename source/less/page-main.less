@@ -8,9 +8,9 @@
 
   .page-main__title {
     display: grid;
-    grid-template-rows: minmax(73px, auto) minmax(90px, auto) minmax(120px, auto);
+    grid-template-rows: 70px minmax(90px, auto) minmax(120px, auto);
     background-image: url("../img/inner-header-background-mobile.jpg");
-    background-position: center;
+    background-position: center top -18px;
     background-repeat: no-repeat;
     min-height: 373px;
     width: 260px;
@@ -35,8 +35,9 @@
   }
 
   .page-main__title {
-    grid-template-rows: minmax(155px, auto) minmax(100px, auto) minmax(372px, auto);
+    grid-template-rows: 115px minmax(100px, auto) minmax(372px, auto);
     background-image: url("../img/inner-header-background-tablet.jpg");
+    background-position: center top -37px;
     width: 668px;
 
     @media (min-resolution: 2dppx) {
@@ -48,8 +49,9 @@
 
 @media (min-width: @desktop-width) {
   .page-main__title {
-    grid-template-rows: minmax(155px, auto) minmax(100px, auto) minmax(355px, auto);
+    grid-template-rows: 120px minmax(100px, auto) minmax(355px, auto);
     background-image: url("../img/inner-header-background-desktop.jpg");
+    background-position: center top -40px;
     width: 700px;
 
     @media (min-resolution: 2dppx) {

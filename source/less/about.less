@@ -1,12 +1,12 @@
 @media (min-width: @mobile-width) {
   .about {
-    padding: 0 30px;
     margin-bottom: 58px;
   }
 
   .about__title {
     margin-top: 0;
     margin-bottom: 28px;
+    margin-left: -7px;
   }
 
   .about__list {
@@ -24,6 +24,7 @@
   .about__item {
     list-style-type: none;
     margin-bottom: 32px;
+    margin-left: -7px;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -35,55 +36,65 @@
   }
 
   .about__item--eco svg {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .about__item--price svg {
-    margin-bottom: 26px;
+    margin-bottom: 20px;
   }
 
   .about__item--likes svg {
-    margin-bottom: 21px;
+    margin-bottom: 19px;
   }
 
   .about__item--handmade svg {
-    margin-bottom: 17px;
+    margin-bottom: 12px;
   }
 
   .about__item--native svg {
-    margin-bottom: 26px;
+    margin-bottom: 23px;
   }
 
   .about__item--gift svg {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .about {
     padding: 0 50px;
-    margin-bottom: 83px;
+    margin-bottom: 25px;
 
     .title {
       align-self: flex-start;
       margin-bottom: 41px;
+      margin-left: -1px;
     }
   }
 
   .about__list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 70px;
+    grid-template-columns: 330px 330px;
     font-size: 20px;
     line-height: 22px;
   }
 
   .about__item {
     margin-bottom: 60px;
+    margin-left: 1px;
+    letter-spacing: 0.1px;
+  }
+
+  .about__item--eco svg {
+    margin-bottom: 14px;
   }
 
   .about__item--handmade {
     order: 2;
+
+    svg {
+      margin-bottom: 18px;
+    }
   }
 
   .about__item--price {
@@ -104,11 +115,33 @@
 }
 
 @media (min-width: @desktop-width) {
-  .about {
-    margin-bottom: 90px;
+  .about .title {
+    margin-left: -20px;
   }
 
-  .about__list {
-    column-gap: 85px;
+  .about__item--eco {
+    margin-left: -20px;
+
+    svg {
+      margin-top: -4px;
+      margin-left: 6px;
+    }
+  }
+
+  .about__item--price {
+    margin-left: -20px;
+
+    svg {
+      margin-top: -8px;
+    }
+  }
+
+  .about__item--likes {
+    margin-left: -20px;
+
+    svg {
+      margin-top: -4px;
+      margin-left: 4px;
+    }
   }
 }
