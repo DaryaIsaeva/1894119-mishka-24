@@ -1,0 +1,147 @@
+@media (min-width: @mobile-width) {
+  .radio {
+    margin-bottom: 35px;
+  }
+
+  .radio__title {
+    padding: 0;
+    position: relative;
+    margin-bottom: 29px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 200px;
+      top: 8px;
+      left: 58px;
+      background: #62d1ba;
+    }
+  }
+
+  .radio__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .radio__item {
+    list-style-type: none;
+
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+  }
+
+  .radio__label {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    column-gap: 18px;
+
+    &:hover .radio__mark {
+      border: 2px solid #62d1ba;
+    }
+
+    &:active .radio__mark {
+      border: 2px solid rgba(68, 68, 68, 0.3);
+    }
+  }
+
+  .radio__input {
+    margin: 0;
+    display: none;
+  }
+
+  .radio__input:focus .radio__mark {
+    border: 2px solid #62d1ba;
+  }
+
+  .radio__input:checked + .radio__mark::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 11px;
+    width: 16px;
+    height: 16px;
+    background-color: #62d1ba;
+    border-radius: 50%;
+  }
+
+  .radio__mark {
+    width: 37px;
+    height: 35px;
+    border: 2px solid #444444;
+    position: relative;
+    border-radius: 50%;
+  }
+
+  .radio__name {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 18px;
+    color: #000000;
+    margin-top: 5px;
+    align-self: center;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .radio {
+    display: grid;
+    grid-template-columns: 169px 1fr;
+    margin-bottom: 50px;
+  }
+
+  .radio__title {
+    position: absolute;
+    margin-bottom: 0;
+    grid-column: 1/2;
+    margin-top: 17px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .radio__list {
+    grid-column: 2/3;
+  }
+
+  .radio__item:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  .radio__mark {
+    width: 46px;
+    height: 44px;
+  }
+
+  .radio__input:checked + .radio__mark::before {
+    top: 13px;
+    left: 15px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .radio__label {
+    grid-template-columns: 52px 1fr;
+    column-gap: 26px;
+  }
+
+  .radio__name {
+    margin: 0;
+    font-size: 19px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .radio {
+    grid-template-columns: 128px 1fr;
+    margin-bottom: 50px;
+  }
+
+  .radio__title {
+    margin-left: 12px;
+  }
+}

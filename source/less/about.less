@@ -5,104 +5,147 @@
 
   .about__title {
     margin-top: 0;
-    margin-bottom: 28px;
-    margin-left: -7px;
+    margin-bottom: 80px;
+    margin-left: -9px;
   }
 
   .about__list {
     padding: 0;
     margin: 0;
-    font-family: "Open Sans bold", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 20px;
     display: flex;
     flex-direction: column;
   }
 
   .about__item {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
     list-style-type: none;
-    margin-bottom: 32px;
-    margin-left: -7px;
+    margin-bottom: 83px;
+    margin-left: -9px;
+    position: relative;
 
     &:last-of-type {
       margin-bottom: 0;
     }
-
-    p {
-      margin: 0;
-    }
   }
 
-  .about__item--eco svg {
-    margin-bottom: 12px;
+  .about__item--eco::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/eco.svg");
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 38px;
+    top: -54px;
+    left: 5px;
   }
 
-  .about__item--price svg {
-    margin-bottom: 20px;
+  .about__item--price::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/price.svg");
+    background-repeat: no-repeat;
+    width: 47px;
+    height: 27px;
+    top: -53px;
   }
 
-  .about__item--likes svg {
-    margin-bottom: 19px;
+  .about__item--likes::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/likes.svg");
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 27px;
+    top: -48px;
+    left: 5px;
   }
 
-  .about__item--handmade svg {
-    margin-bottom: 12px;
+  .about__item--handmade::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/handmade.svg");
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 34px;
+    top: -51px;
   }
 
-  .about__item--native svg {
-    margin-bottom: 23px;
+  .about__item--native::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/native.svg");
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 23px;
+    top: -49px;
+    left: -7px;
   }
 
-  .about__item--gift svg {
-    margin-bottom: 16px;
+  .about__item--gift::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/gift.svg");
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 32px;
+    top: -52px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .about {
     padding: 0 50px;
-    margin-bottom: 25px;
+    margin-bottom: -25px;
+  }
 
-    .title {
-      align-self: flex-start;
-      margin-bottom: 41px;
-      margin-left: -1px;
-    }
+  .about__title {
+    margin-bottom: 98px;
+    margin-left: 0;
   }
 
   .about__list {
     display: grid;
-    grid-template-columns: 330px 330px;
-    font-size: 20px;
-    line-height: 22px;
+    grid-template-columns: 335px 335px;
   }
 
   .about__item {
-    margin-bottom: 60px;
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 110px;
     margin-left: 1px;
-    letter-spacing: 0.1px;
   }
 
-  .about__item--eco svg {
-    margin-bottom: 14px;
+  .about__item--eco::before {
+    left: 8px;
+    top: -56px;
   }
 
   .about__item--handmade {
     order: 2;
 
-    svg {
-      margin-bottom: 18px;
+    &::before {
+      top: -53px;
     }
   }
 
   .about__item--price {
     order: 3;
+
+    &::before {
+      top: -54px;
+    }
   }
 
   .about__item--native {
     order: 4;
+
+    &::before {
+      top: -53px;
+    }
   }
 
   .about__item--likes {
@@ -111,37 +154,19 @@
 
   .about__item--gift {
     order: 6;
+
+    &::before {
+      top: -53px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .about .title {
-    margin-left: -20px;
+  .about__title {
+    margin-bottom: 95px;
   }
 
-  .about__item--eco {
-    margin-left: -20px;
-
-    svg {
-      margin-top: -4px;
-      margin-left: 6px;
-    }
-  }
-
-  .about__item--price {
-    margin-left: -20px;
-
-    svg {
-      margin-top: -8px;
-    }
-  }
-
-  .about__item--likes {
-    margin-left: -20px;
-
-    svg {
-      margin-top: -4px;
-      margin-left: 4px;
-    }
+  .about__list {
+    grid-template-columns: 350px 350px;
   }
 }

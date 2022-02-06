@@ -1,16 +1,21 @@
 @media (min-width: @mobile-width) {
+  .additionally {
+    margin-top: 35px;
+    margin-bottom: 12px;
+  }
+
   .additionally__title {
     padding: 0;
     position: relative;
-    margin-bottom: 23px;
+    margin-bottom: 21px;
 
     &::after {
       content: "";
       position: absolute;
       height: 1px;
       width: 200px;
-      top: 8px;
-      left: 58px;
+      top: 7px;
+      left: 60px;
       background: #62d1ba;
     }
   }
@@ -19,7 +24,7 @@
     padding: 0;
     width: 100%;
     border: 2px solid #444444;
-    min-height: 142px;
+    min-height: 139px;
 
     &:hover {
       border: 2px solid #62d1ba;
@@ -53,6 +58,8 @@
   .additionally {
     display: grid;
     grid-template-columns: 167px 1fr;
+    margin-top: 67px;
+    margin-bottom: 53px;
   }
 
   .additionally__title {
@@ -67,15 +74,33 @@
   .additionally__input {
     grid-column: 2/3;
     margin-top: -18px;
+    min-height: 136px;
   }
 
   .additionally__input::placeholder {
     font-size: 19px;
+    padding-top: 13px;
+    padding-left: 15px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .additionally {
-    grid-template-columns: 112px 700px;
+    grid-template-columns: 126px 700px;
+    margin-bottom: 48px;
+  }
+
+  .additionally__title {
+    margin-left: 14px;
+    margin-top: 2px;
+  }
+
+  .additionally__input {
+    min-height: 140px;
+  }
+
+  .additionally__input::placeholder {
+    padding-top: 15px;
+    padding-left: 16px;
   }
 }

@@ -37,7 +37,7 @@
   }
 
   .reviews__author {
-    font-family: "Open Sans bold", "Arial", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 17px;
@@ -61,7 +61,7 @@
     padding: 0 50px;
     padding-top: 78px;
     padding-bottom: 53px;
-    margin-bottom: 135px;
+    margin-bottom: 153px;
   }
 
   .reviews::before {
@@ -84,7 +84,7 @@
     width: 175px;
     margin: 0;
     margin-left: auto;
-    margin-top: -2px;
+    margin-top: -3px;
     padding-bottom: 14px;
   }
 
@@ -102,6 +102,7 @@
     grid-column: 2/3;
     grid-row: 3/4;
     margin-left: auto;
+    margin-top: 4px;
   }
 
   .reviews__text {
@@ -121,7 +122,8 @@
   .reviews {
     width: @desktop-width - 100px;
     grid-template-columns: 174px 1fr 1fr;
-    margin-bottom: 168px;
+    margin-bottom: 160px;
+    padding-top: 80px;
     padding-bottom: 100px;
   }
 
@@ -138,6 +140,7 @@
 
   .reviews__button {
     grid-column: 3/4;
+    margin-top: 4px;
   }
 
   .reviews__list {
@@ -145,7 +148,11 @@
   }
 
   .reviews__text {
-    margin-bottom: 45px;
+    margin-bottom: 42px;
+
+    br:first-child {
+      display: block;
+    }
   }
 
   .reviews__author {

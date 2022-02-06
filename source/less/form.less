@@ -3,11 +3,12 @@
     margin-bottom: 55px;
     display: flex;
     flex-direction: column;
+    padding: 0 30px;
   }
 
   .form__text {
     align-self: center;
-    margin-bottom: 37px;
+    margin-bottom: 29px;
   }
 
   .form__text p {
@@ -25,7 +26,6 @@
     border: 0;
     padding: 0;
     margin: 0;
-    margin-bottom: 33px;
 
     legend {
       font-family: "Open Sans", "Arial", sans-serif;
@@ -35,16 +35,30 @@
       line-height: 16px;
       text-transform: uppercase;
       color: #63d1bb;
+      padding: 0;
+      position: relative;
     }
   }
 
   .form__note {
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
     color: #444444;
+
+    p {
+      font-family: "Open Sans", "Arial", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      margin-top: 0;
+      margin-bottom: 31px;
+    }
+
+    .button {
+      font-size: 17px;
+      line-height: 16px;
+      padding-top: 17px;
+      padding-bottom: 15px;
+    }
   }
 }
 
@@ -54,21 +68,33 @@
     width: 100%;
   }
 
+  .form__text {
+    margin-bottom: 65px;
+  }
+
   .form__text p {
     font-size: 17px;
     line-height: 30px;
     width: 668px;
     align-self: center;
-    margin: 0;
   }
 
   .form__container {
     background-color: #f1f1f1;
+    padding: 50px 0;
   }
 
   .form__group {
     width: 668px;
-    margin: 66px auto;
+    margin: 0 auto;
+
+    legend {
+      position: absolute;
+    }
+  }
+
+  .form__group--radio {
+    padding-bottom: 52px;
   }
 
   .form__note {
@@ -78,8 +104,16 @@
     flex-direction: row-reverse;
     justify-content: space-between;
 
+    p {
+      margin-bottom: 0;
+      font-size: 17px;
+      line-height: 30px;
+      align-self: center;
+    }
+
     .button {
       margin: 0;
+      width: 230px;
     }
   }
 }
@@ -89,7 +123,7 @@
     width: 950px;
     padding: 0 50px;
     display: grid;
-    grid-template-columns: 112px auto;
+    grid-template-columns: 127px auto;
   }
 
   .form__text p {

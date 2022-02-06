@@ -11,16 +11,16 @@
   .inner-header--size {
     background-color: #f1f1f1;
     text-align: center;
-    padding: 74px 0;
+    padding: 72px 0;
   }
 
   .inner-header--form {
-    margin-bottom: 17px;
+    margin-bottom: 18px;
   }
 
   .inner-header__title {
     margin: 0;
-    font-family: "Open Sans bold", "Arial", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 27px;
     line-height: 30px;
   }
@@ -33,12 +33,12 @@
 @media (min-width: @tablet-width) {
   .inner-header {
     padding-top: 40px;
-    margin-bottom: 54px;
+    margin-bottom: 50px;
   }
 
   .inner-header__title {
-    letter-spacing: 0.4px;
-    font-style: bold;
+    font-style: normal;
+    font-weight: bold;
     font-size: 43px;
     line-height: 50px;
   }
@@ -46,10 +46,22 @@
   .inner-header--size {
     padding-top: 101px;
     padding-bottom: 75px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/zigzag-fill-tablet.svg");
+      background-position: center;
+      width: 100vw;
+      height: 24px;
+      left: 0;
+      bottom: -10px;
+    }
   }
 
   .inner-header--catalog {
-    margin-bottom: 67px;
+    margin-bottom: 77px;
   }
 
   .inner-header--form {
@@ -63,24 +75,31 @@
 
 @media (min-width: @desktop-width) {
   .inner-header {
-    margin-bottom: 68px;
+    margin-bottom: 63px;
   }
 
   .inner-header--size {
     padding-top: 102px;
     padding-bottom: 96px;
+
+    &::after {
+      background-image: url("../img/zigzag-fill-desktop.svg");
+      height: 34px;
+      bottom: -15px;
+    }
   }
 
   .inner-header--catalog {
-    margin-bottom: 111px;
+    margin-bottom: 127px;
   }
 
   .inner-header--form {
-    margin-bottom: 116px;
+    margin-bottom: 115px;
   }
 
   .inner-header__title {
     font-size: 53px;
     line-height: 57px;
+    margin-left: 4px;
   }
 }
