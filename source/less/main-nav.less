@@ -36,6 +36,10 @@
 
   .main-nav--closed .main-nav__toggle {
     display: block;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 
   .main-nav--closed .main-nav__toggle::before {
@@ -84,6 +88,10 @@
 
   .main-nav--closed .main-nav__first-list {
     display: none;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+    }
   }
 
   .main-nav__item {
@@ -118,6 +126,10 @@
 
   .main-nav--closed .main-nav__second-list {
     display: none;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+    }
   }
 
   .main-nav__search {
